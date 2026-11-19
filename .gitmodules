@@ -1,6 +1,6 @@
 [submodule "wine"]
 	path = wine
-	url = http://localhost:3000/hao/wine-dwproton-ds.git
+	url = https://github.com/haoyn231/wine-dwproton-ds.git
 	branch = feat
 [submodule "meson"]
 	path = meson

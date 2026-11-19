@@ -1,4 +1,25 @@
-# DWProton
+# DWProton DS — 非官方 DualSense 实验构建
+
+基于 **DWProton 11.0-14**，移植 [xzn/proton-ds5-haptic](https://github.com/xzn/proton-ds5-haptic) 的 DualSense 音频与触觉相关补丁。目标是让使用 USB 连接的 PS5 手柄在原生支持它的游戏中获得更完整的功能。
+
+这是个人维护的实验分支，与 Dawn Winery、Wine、Valve、Sony 无隶属关系。补丁移植、构建及发布整理使用了 AI 辅助；上游代码与补丁的著作权归原作者所有。
+
+**[下载 Release](https://github.com/haoyn231/dwproton-ds/releases) · [构建方式、源码与已知限制](dualsense/README.md) · [修改后的 Wine 源码](https://github.com/haoyn231/wine-dwproton-ds/tree/feat)**
+
+首个版本采用原版 DWProton 11.0-14 的发行包，替换本地重编译的 14 个 i386 / x86_64 模块文件；不是一次成功的完整 Proton 重构建。已检查模块与基本启动，尚未验证本版本的游戏内灯光、振动、扬声器表现及长时间稳定性。
+
+下载 `dwproton-11.0-14-ds-x86_64.tar.xz`，校验 `SHA256SUMS` 后解压：
+
+- Steam：放到 `~/.local/share/Steam/compatibilitytools.d/`，重启 Steam，在游戏兼容性选项中选择 `dwproton-11.0-14-ds-x86_64`。
+- Lutris：放到 `~/.local/share/lutris/runners/wine/`，重新打开 Lutris，在游戏的 Wine 版本中选择此 runner。
+
+Flatpak Steam 使用 `~/.var/app/com.valvesoftware.Steam/data/Steam/compatibilitytools.d/`。游戏本身需要支持 DualSense；Steam Input 的转换可能让游戏看到 Xbox 手柄，测试原生功能时请关闭该游戏的 Steam Input。
+
+原始 DWProton README 保留如下，描述的是上游项目；上游的安装器不会自动安装本分支。
+
+---
+
+# DWProton (upstream)
 
 ![WINE_CANONICAL_HOLE](https://img.shields.io/badge/WINE__CANONICAL__HOLE-%22skip__volatile__check%22-green.png)
 
